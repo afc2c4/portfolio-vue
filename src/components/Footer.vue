@@ -32,12 +32,7 @@
 <script>
 
 export default {
-   data: () => ({
-       icon:[
-           "mdi-facebook", "md-twitter", "mdi-linkedin", "mdi-instagram"
-       ]
-   })
-}
+};
 </script>
 
 <style>

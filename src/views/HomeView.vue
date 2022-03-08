@@ -21,7 +21,7 @@
             itaque esse enim commodi! Fuga officiis accusantium laboriosam ab
             eius ipsam quam ratione.
           </p>
-          <v-btn title color="#A7121D" dark>About Me</v-btn>
+          <v-btn tile color="#A7121D" dark>About Me</v-btn>
         </v-col>
         <v-col cols="12" class="padd">
           <div class="first" id="project">
@@ -29,9 +29,9 @@
               <v-col cols="12">
                 <div class="child bgColor1">
                   <v-icon color="#A7121D" x-large class="ml-3">
-                    mdi-pallete-swatch
+                    mdi-palette-swatch
                   </v-icon>
-                  <h3 class="white--text ml-3mt-4">UI Design</h3>
+                  <h3 class="white--text ml-3 mt-4">UI Design</h3>
                   <p class="grey--text ml-3 mt-6">
                     Lorem ipsum dolor sit, <br />
                     amet consectetur adipisicing elit.
@@ -42,13 +42,13 @@
                   </v-btn>
                 </div>
                 <div class="child bgColor2">
-                  <v-icon x-large class="ml-3">mdi-shopping</v-icon>
+                  <v-icon color="" x-large class="ml-3" dark>mdi-shopping</v-icon>
                   <h3 class="white--text ml-3 mt-4">Product Design</h3>
-                  <p class="grey--text ml-3 m-6">
+                  <p class="grey--text ml-3 mt-6">
                     Lorem, ipsum dolor site amet <br />
                     consectetur adipisicing elit.
                   </p>
-                  <v-btn dark text>
+                  <v-btn color="" dark text>
                     know more
                     <v-icon right>mdi-arrow-right</v-icon>
                   </v-btn>
@@ -59,8 +59,8 @@
                     >mdi-book-open-page-variant</v-icon
                   >
 
-                  <h3 class="white--text ml-3 mt-4">Product Design</h3>
-                  <p class="grey--text ml-3 m-6">
+                  <h3 class="white--text ml-3 mt-4">Branding</h3>
+                  <p class="grey--text ml-3 mt-6">
                     Lorem, ipsum dolor site amet <br />
                     consectetur adipisicing elit.
                   </p>
@@ -73,7 +73,7 @@
               </v-col>
               <v-col cols="12" class="mt-10">
                 <div class="child1">
-                  <h1 class="red--text text-darken-4 mt-4 number">12</h1>
+                  <h1 class="red--text text--darken-4 mt-4 number">12</h1>
                   <h3 class="white--text mt-4">Years Experience</h3>
                 </div>
 
@@ -116,11 +116,11 @@
         </v-col>
 
         <v-col md="3" offset-md="3" id="about">
-          <h4 class="white--text">FEATURE PROJECTS</h4>
+          <h4 class="white--text">FEATURED PROJECTS</h4>
           <p class="grey--text">Lorem ipsum dolor Lorem ipsum dolor</p>
         </v-col>
         <v-col md="3" class="text-end">
-          <v-btn tile color="#A7121D">View All</v-btn>
+          <v-btn tile color="#A7121D" dark>View All</v-btn>
         </v-col>
 
         <v-col md="3" offset-md="3">
@@ -131,7 +131,7 @@
             height="250px"
             color="#1E1E1E"
           >
-            <v-img src="3.png" contain></v-img>
+            <v-img src="3.png" contain max-height=""></v-img>
           </v-card>
         </v-col>
 
@@ -143,12 +143,12 @@
             height="250px"
             color="#1E1E1E"
           >
-            <v-img src="2.png" contain></v-img>
+            <v-img src="2.png" contain  max-height=""></v-img>
           </v-card>
         </v-col>
 
         <v-col md="3" offset-md="3">
-          <v-btn color="white" dark text class="ml-n4"> The Vintage </v-btn>
+          <v-btn color="black" dark text class="ml-n4"> The Vintage </v-btn>
           <br />
           <v-btn color="#A7121D" dark text class="ml-n4">
             know more
@@ -156,8 +156,8 @@
           </v-btn>
         </v-col>
 
-        <v-col md="3" offset-md="3">
-          <v-btn color="white" dark text class="ml-n4"> Foodasa </v-btn> <br />
+        <v-col md="3">
+          <v-btn color="black" dark text class="ml-n4"> Foodasa </v-btn> <br />
           <v-btn color="#A7121D" dark text class="ml-n4">
             know more
             <v-icon right>mdi-arrow-right</v-icon>
@@ -172,7 +172,7 @@
             height="250px"
             color="#1E1E1E"
           >
-            <v-img src="4.png" contain></v-img>
+            <v-img src="4.png" contain max-height=""></v-img>
           </v-card>
         </v-col>
 
@@ -184,7 +184,7 @@
             height="250px"
             color="#1E1E1E"
           >
-            <v-img src="5.png" contain></v-img>
+            <v-img src="5.png" contain max-height=""></v-img>
           </v-card>
         </v-col>
 
@@ -197,7 +197,7 @@
           </v-btn>
         </v-col>
 
-        <v-col md="3" offset-md="3">
+        <v-col md="3">
           <v-btn color="white" dark text class="ml-n4"> Mozaik </v-btn> <br />
           <v-btn color="#A7121D" dark text class="ml-n4">
             know more
@@ -245,20 +245,24 @@
         </v-col>
       </v-row>
     </v-container>
-    <Footer/>
+    <Footer />
   </v-app>
 </template>
 
 <script>
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../components/Navbar.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   name: "Home",
 
+   data: () => ({
+    icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
+  }),
+
   components: {
     Navbar,
-    Footer
+    Footer,
   },
 };
 </script>
@@ -305,6 +309,7 @@ export default {
   padding: 2rem 1rem;
   vertical-align: middle;
   text-align: left;
+  margin-top: 250px;
 }
 
 .child {
@@ -346,7 +351,7 @@ export default {
 }
 
 .padding {
-  padding: 8px 0px;
+  padding: 8px 0;
 }
 
 .col-12.padd {
